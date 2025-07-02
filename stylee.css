@@ -1,0 +1,543 @@
+<!-- EMBEDDED CSS -->
+<style>
+    /* Your ENTIRE CSS goes here */
+    /* paste the whole CSS content inside this <style> tag */
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar (Optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #6c63ff;
+  border-radius: 10px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #6c63ff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+nav ul li {
+  font-size: 1rem;
+  color: #2b2d42;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+nav ul li:hover {
+  color: #6c63ff;
+}
+
+/* Auth Buttons */
+.auth {
+  display: flex;
+  gap: 20px;
+}
+.auth button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #6c63ff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.auth button:hover {
+  background-color: #554fd8;
+  transform: scale(1.05);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.hero-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px 80px;
+  border-radius: 10px;
+  max-width: 900px;
+  width: 90%;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+.hero button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.hero button:hover {
+  transform: scale(1.05);
+}
+.explore {
+  background-color: #ff6f61;
+  color: white;
+}
+.explore:hover {
+  background-color: #e45a4e;
+}
+.practice {
+  background-color: #6c63ff;
+  color: white;
+}
+.practice:hover {
+  background-color: #5750e6;
+}
+
+/* Sections */
+.section {
+  padding: 60px 40px;
+  text-align: center;
+}
+.section:nth-of-type(even) {
+  background-color: #f4f4f4;
+}
+
+/* Cards Container */
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: nowrap;
+}
+
+/* Card */
+.card {
+  background-color: #f4f4f4;
+  padding: 30px;
+  width: 320px;
+  height: 260px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  position: relative;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+}
+.card-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.card-description {
+  font-size: 1rem;
+  color: #444;
+}
+.card-footer {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Grid Cards (Subjects & Notes) */
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Forces 4 in one row */
+  gap: 25px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+.subject-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 40px;
+  padding-left:60px;
+  padding-right:60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px; 
+ }
+.subject-card:hover, .note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Note & Subject Icons */
+.subject-icon, .note-icon {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #6c63ff;
+}
+ .subject-title {
+  font-size: 20px; /* make it pop */
+  font-weight: 600;
+  margin: 12px 0;
+}
+
+.subject-meta {
+  font-size: 14px;
+  color: #777;
+  margin-top: auto; /* pushes it to the bottom */
+}
+.view-all-btn {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #5750e6;
+  transform: scale(1.05);
+}
+.view-all-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+ 
+.top-notes {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.top-notes h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* forces 4 equal columns */
+  gap: 30px;
+  justify-items: center;
+}
+
+.note-card {
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  text-align: left;
+}
+
+.note-subject {
+  color: #6c63ff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.note-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.note-description {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: auto;
+}
+
+.download-btn {
+  background-color: #6c63ff;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #5750e6;
+  transform: scale(1.05);
+}
+
+/* Testimonials */
+.testimonial {
+  background-color: #fff;
+  padding: 30px;
+  margin: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 320px;
+}
+.testimonial p {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #333;
+}
+.stars {
+  color: #fbbf24;
+  margin-bottom: 10px;
+}
+.testimonial-name {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #2b2d42;
+}
+.testimonial-role {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* CTA Section */
+.cta-section {
+  background: #6c63ff;
+  color: white;
+  padding: 60px 30px;
+  text-align: center;
+}
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+.cta-section button {
+  background-color: #fff;
+  color: #6c63ff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+.cta-section button:hover {
+  background-color: #e6e6ff;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+ }
+
+  .auth {
+    margin-top: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+.site-footer {
+  background-color: #1f1f2e;
+  color: #eee;
+  padding: 60px 20px 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer-section h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #6c63ff;
+}
+
+.logo-section .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #6c63ff;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #6c63ff;
+}
+    
+@media (max-width: 768px) {
+  /* Features section (Why NotesNexus) cards stack */
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  /* Testimonials stack */
+  .testimonials .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  /* Already working sections stay responsive */
+  .subjects-grid,
+  .notes-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .subject-card,
+  .note-card {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .view-all-btn-wrapper {
+    justify-content: center;
+  }
+}
+</style>
