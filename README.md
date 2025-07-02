@@ -17,4 +17,4 @@ CSS3
 JavaScript
 
 Author
-Made with love by @Anwesha-18
+Made with love by @shreyosiii
