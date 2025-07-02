@@ -9,7 +9,7 @@ Features
 💡 Cute and minimal design
 📱 Responsive layout (mobile friendly!)
 Live Demo
-🔗 "C:\Users\User\OneDrive\Documents\NotesNexus.html"
+🔗 Click here to view the site
 
 Tech Stack
 HTML5
